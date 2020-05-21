@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noise</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        #noise {
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            position: fixed;
+            background: #8d4444;
+        }
+
+
+        .text {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            color: rgb(207, 16, 16);
+            max-width: 90%;
+            padding: 2em 3em;
+            background: rgba(226, 44, 44, 0.4);
+            text-shadow: 0px 0px 2px #131415;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            font-size: 2.25em;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="noise"></div>
+
+    <div class="text">
+        <h1>Pichkari..</h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script type="text/javascript">
+        function setup() {
+            var canvas = createCanvas(windowWidth, windowHeight);
+            canvas.parent('noise');
+        }
+
+        function draw() {
+            background(color(249, 251, 251));
+            let c = color(104, 243, 217); // Define color 'c'
+            fill(c); // Use color variable 'c' as fill color
+            noStroke();
+
+            //shape(positionX,positionY,Width,Height)
+            for (let i = 0; i < 8000; i++) {
+                rect(random(width), random(height), 3, 3);
+            }
+        }
+    </script>
+</body>
+
+</html>

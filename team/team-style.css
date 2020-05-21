@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Opon Sans', sans-serif;
+}
+
+#particles-js {
+    width: 100%;
+    min-height: 100vh;
+    background: #262626;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: fixed;
+}
+
+
+.team-section {
+    width: 100%;
+    color: #ffffff;
+    min-height: 100%;
+    /* background: linear-gradient(-45deg, #69e7e8, #dee87f, #65e9c6, #43d373); */
+    padding: 70px 15px 30px;
+    background-size: 400% 400%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    margin: 100px auto 0;
+    height: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 20px;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 440px;
+    margin: 0 auto;
+    background: rgb(10, 1, 1);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* .container .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+} */
+
+.container .card .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    opacity: .5;
+
+}
+
+.container .card .img-box img {
+    width: 100%;
+}
+
+.container .card .content {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: -100%;
+    padding: 20px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    bottom: 0;
+}
+
+.container .card:nth-child(1) .content {
+    background: linear-gradient(0deg, #472917, transparent);
+}
+
+.container .card:nth-child(2) .content {
+    background: linear-gradient(0deg, #18c265, transparent);
+}
+
+.container .card:nth-child(3) .content {
+    background: linear-gradient(0deg, #a9c218, transparent);
+}
+
+.container .card:nth-child(4) .content {
+    background: linear-gradient(0deg, #4d3585, transparent);
+}
+
+.container .card:nth-child(5) .content {
+    background: linear-gradient(0deg, #a618c2, transparent);
+}
+
+.container .card:nth-child(6) .content {
+    background: linear-gradient(0deg, #FF69B4, transparent);
+}
+
+.container .card .content h2 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.container .card .content h2 span {
+    color: #0c0101;
+    font-size: 16px;
+}
+
+.container .card .content p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.container .card .content ul {
+    display: flex;
+    margin: 20px 0 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .card .content ul li {
+    list-style: none;
+}
+
+.container .card .content ul li a {
+    color: #fff;
+    padding: 0 15px;
+    font-size: 18px;
+
+}
+
+.container .card .content ul li a i:hover {
+    font-size: 40px;
+    transition: 0.2s;
+}
+
+.fa-facebook:hover {
+    color: royalblue;
+}
+
+.fa-twitter:hover {
+    color: #00acee;
+}
+
+.fa-linkedin:hover {
+    color: #0e76a8;
+}
