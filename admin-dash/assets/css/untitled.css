@@ -1,0 +1,18 @@
+.icon:hover {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.table {
+  /*box-shadow: box-shadow: 2px 2px 4px 4px #8CCCC8;*/
+  box-shadow: 1px 1px 3px 3px #6a8feb;
+}
+
+.far.fa-envelope.fa-fw.icon {
+  color: rgb(203,105,15);
+}
+
+.fas.fa-rupee-sign.fa-2x {
+  color: gold;
+}
+
